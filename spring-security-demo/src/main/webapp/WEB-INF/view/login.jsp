@@ -14,6 +14,9 @@
 <body>
 <h3>Custom Login Page</h3>
 <form:form action="${pageContext.request.contextPath}/authenticate" method="post">
+    <%if(request.getParameter("error") != null) { %>
+        <p>user name or password is incorrect!!!</p>
+    <%}%>
 <p>User name: <input name="username" type="text"></p>
 <p>password: <input name="password" type="password"></p>
     <input type="submit" value="LOGIN">
