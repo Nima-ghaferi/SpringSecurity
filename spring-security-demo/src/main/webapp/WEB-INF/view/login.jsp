@@ -17,6 +17,9 @@
     <%if(request.getParameter("error") != null) { %>
         <p>user name or password is incorrect!!!</p>
     <%}%>
+    <%if(request.getParameter("logout") != null) { %>
+    <p>You have been logged out.</p>
+    <%}%>
 <p>User name: <input name="username" type="text"></p>
 <p>password: <input name="password" type="password"></p>
     <input type="submit" value="LOGIN">
