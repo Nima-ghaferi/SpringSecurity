@@ -19,6 +19,14 @@
     <br>
     Roles: <security:authentication property="principal.authorities" />
 </p>
+<hr>
+<p>
+    <a href="${pageContext.request.contextPath}/leaders" >Leadership meeting</a>
+</p>
+<hr>
+<p>
+    <a href="${pageContext.request.contextPath}/systems" >Admin meeting</a>
+</p>
     <form:form action="${pageContext.request.contextPath}/logout" method="post">
         <input type="submit" value="LOG OUT">
     </form:form>
