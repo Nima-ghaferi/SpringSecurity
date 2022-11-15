@@ -20,13 +20,18 @@
     Roles: <security:authentication property="principal.authorities" />
 </p>
 <hr>
+<security:authorize access="hasRole('MANAGER')">
 <p>
     <a href="${pageContext.request.contextPath}/leaders" >Leadership meeting</a>
 </p>
 <hr>
+</security:authorize>
+<security:authorize access="hasRole('ADMIN')">
 <p>
     <a href="${pageContext.request.contextPath}/systems" >Admin meeting</a>
 </p>
+<hr>
+</security:authorize>
     <form:form action="${pageContext.request.contextPath}/logout" method="post">
         <input type="submit" value="LOG OUT">
     </form:form>
